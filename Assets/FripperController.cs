@@ -60,13 +60,13 @@ public class FripperController : MonoBehaviour {
             {
 
                 // 右側タッチ時、右フリッパーを動かす
-                if (touch.position.x > width / 2 && tag == "RightFripperTag")
+                if (touch.position.x > width / 2 && tag == "RightFripperTag" && FripperId == -1)
                  {
                     FripperId = touch.fingerId; // fingerID保存
                     SetAngle(this.flickAngle);
                  }
                  // 左側タッチ時、左フリッパーを動かす
-                 else if (touch.position.x <= width / 2 && tag == "LeftFripperTag")
+                 else if (touch.position.x <= width / 2 && tag == "LeftFripperTag" && FripperId == -1)
                  {
                       FripperId = touch.fingerId; // fingerID保存
                       SetAngle(this.flickAngle);
